@@ -1,0 +1,73 @@
+body {
+    font-family: 'Quicksand', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #1e1e2b;
+    color: var(--white);
+    margin: 0;
+  }
+  
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .card {
+    --white: hsl(0, 0%, 83%);
+    --black: hsl(240, 15%, 9%);
+    --stone-300: hsl(24, 6%, 83%);
+    --pink-500: hsl(299, 100%, 83%);
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .sub-card {
+    display: flex;
+    align-items: center;
+    padding: 0.75rem;
+    min-width: 11.5rem;
+    height: 2.25rem;
+    background-color: var(--stone-300);
+  }
+  .sub-card.category {
+    justify-content: space-between;
+    border-radius: 0.5rem 0.5rem 0rem 0rem;
+    transition: all 0.5s cubic-bezier(1, 0, 0, 1);
+  }
+  .sub-card.named {
+    justify-content: center;
+    border-radius: 0rem 0rem 0.5rem 0.5rem;
+    transition: all 0.5s cubic-bezier(1, 0, 0, 1);
+  }
+  
+  .card:hover .sub-card.category {
+    transform: translateY(100%);
+  }
+  .card:hover .sub-card.named {
+    transform: translateY(-100%);
+  }
+  
+  .sub-card .text_span {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--black);
+    text-transform: capitalize;
+  }
+  
+  .sub-card .icon_svg {
+    width: 1rem;
+    fill: var(--black);
+  }
+  
+  .description {
+    text-align: center;
+    max-width: 17rem;
+  }
+  
